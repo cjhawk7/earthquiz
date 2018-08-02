@@ -72,7 +72,7 @@ const APP = {
 $(".js-start-btn").on("click", function() {
   $(".intro").addClass("hidden");
   console.log(APP.currentQuestion, "here1");
-  APP.currentQuestion = 0;
+  APP.currentQuestion = 1;
   APP.numCorrect = 0;
   renderQuestion(APP.questions[APP.currentQuestion]);
   $(".question-counter")
