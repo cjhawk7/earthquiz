@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Planet Earth Quiz</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="intro js-page">
+            <h1>Planet Earth Quiz</h1>
+            <p>Test your knowledge of the planet!!!</p>
+            <button type="button" class="js-start-btn">Start the quiz</button>
+        </div>
+        <div class="question js-page hidden">
+            <form action="#">
+                <fieldset>
+                    <legend>What color is the sky?</legend>
+                    <input type="radio" name="choice" id="choice-0" value="0">
+                    <label for="choice-0">Red</label>
+                    <br>
+                    <input type="radio" name="choice" id="choice-1" value="1">
+                    <label for="choice-1">Blue</label>
+                    <br>
+                    <input type="radio" name="choice" id="choice-2" value="2">
+                    <label for="choice-2">Green</label>
+                    <br>
+                    <input type="radio" name="choice" id="choice-3" value="3">
+                    <label for="choice-3">Orange</label>
+                </fieldset>
+                <button type="submit" class="js-question-submit">Submit</button>
+            </form>
+            <div class="question-counter">
+                <p></p>
+            </div>
+        </div>
+        <div class="feedback js-page hidden">
+            <div class="right hidden">
+                <p> Good Job!</p>
+            </div>
+            <div class="wrong hidden">
+                <p> That was the wrong answer! </p>
+            </div>
+            <button type="submit" class="js-feedback-submit">Next</button>
+        </div>
+        <div class="final js-page hidden">
+            <p></p>
+            <button type="button" class="js-final-submit">Play Again</button>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
