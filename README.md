@@ -12,3 +12,5 @@ Test your knowledge of the planet!
 - CSS
 - Javascript
 - jQuery
+
+https://cjhawk7.github.io/earthquiz/
