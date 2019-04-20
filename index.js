@@ -66,10 +66,10 @@ const APP = {
   questions: QUESTIONS,
   numCorrect: 0,
   currentQuestion: 0,
-  totalQuestions: 10
+  totalQuestions: 11
 };
 
-$(".js-start-btn").on("click", function() {
+$(".js-start-btn").on("click", function () {
   $(".intro").addClass("hidden");
   console.log(APP.currentQuestion, "here1");
   APP.currentQuestion = 1;
@@ -81,7 +81,7 @@ $(".js-start-btn").on("click", function() {
   $(".question").removeClass("hidden");
 });
 
-$("form").on("submit", function(event) {
+$("form").on("submit", function (event) {
   event.preventDefault();
   const userChoice = $('input[name="choice"]:checked').val();
   evaluateAnswer(userChoice, APP.questions[APP.currentQuestion]);
@@ -93,7 +93,7 @@ $("form").on("submit", function(event) {
   $(".question").addClass("hidden");
 });
 
-$(".js-feedback-submit").on("click", function() {
+$(".js-feedback-submit").on("click", function () {
   if (APP.currentQuestion === APP.totalQuestions) {
     finalPage();
   } else {
@@ -109,7 +109,7 @@ function renderQuestion(question) {
   $("form")
     .find("legend")
     .text(question.text);
-  $("label").each(function(i, element) {
+  $("label").each(function (i, element) {
     element.textContent = choices[i];
   });
 }
@@ -136,7 +136,7 @@ function finalPage() {
     .text("You got " + APP.numCorrect.toString() + " correct out of 10!");
 }
 
-$(".js-final-submit").on("click", function() {
+$(".js-final-submit").on("click", function () {
   $(".final").addClass("hidden");
   $(".intro").removeClass("hidden");
 });
